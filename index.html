@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Cluster 12 Differential Expression Analysis</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <h1>GitHub Pages is working!</h1>
+    <h1>Cluster 12 Differential Expression Analysis</h1>
+    <div id="plotly-graph"></div>
+    <script>
+        // Sample data for the Plotly interactive graph
+        var trace1 = {
+            x: [1, 2, 3, 4],
+            y: [10, 15, 13, 17],
+            mode: 'lines+markers',
+            type: 'scatter',
+            name: 'Cluster 12 Data'
+        };
+
+        var data = [trace1];
+
+        var layout = {
+            title: 'Cluster 12 Differential Expression',
+            xaxis: {
+                title: 'Samples'
+            },
+            yaxis: {
+                title: 'Expression Levels'
+            }
+        };
+
+        Plotly.newPlot('plotly-graph', data, layout);
+    </script>
 </body>
 </html>
